@@ -2,10 +2,7 @@ package com.natamus.aprilfools;
 
 import com.natamus.aprilfools.data.Sounds;
 import com.natamus.aprilfools.forge.config.IntegrateForgeConfig;
-import com.natamus.aprilfools.forge.events.ForgeCommandRegisterEvent;
-import com.natamus.aprilfools.forge.events.ForgeFoolsBlockEvents;
-import com.natamus.aprilfools.forge.events.ForgeFoolsEntityEvents;
-import com.natamus.aprilfools.forge.events.ForgeFoolsSoundEvents;
+import com.natamus.aprilfools.forge.events.*;
 import com.natamus.aprilfools.util.Reference;
 import com.natamus.collective.check.RegisterMod;
 import net.minecraft.sounds.SoundEvent;
@@ -47,10 +44,12 @@ public class ModForge {
 	private void loadComplete(final FMLLoadCompleteEvent event) {
 		MinecraftForge.EVENT_BUS.register(new ForgeCommandRegisterEvent());
 
+		MinecraftForge.EVENT_BUS.register(new ForgeFoolsServerTickEvents());
 		MinecraftForge.EVENT_BUS.register(new ForgeFoolsBlockEvents());
 		MinecraftForge.EVENT_BUS.register(new ForgeFoolsEntityEvents());
 
 		if (FMLEnvironment.dist.equals(Dist.CLIENT)) {
+			MinecraftForge.EVENT_BUS.register(new ForgeFoolsClientTickEvents());
 			MinecraftForge.EVENT_BUS.register(new ForgeFoolsSoundEvents());
 		}
 	}
