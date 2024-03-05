@@ -11,6 +11,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Variables {
+	public static boolean itIsAprilFoolsDay = false;
+
 	public static final Logger logger = LogUtils.getLogger();
 
 	public static final List<BlockPos> potatoBlocksBroken = new ArrayList<BlockPos>();

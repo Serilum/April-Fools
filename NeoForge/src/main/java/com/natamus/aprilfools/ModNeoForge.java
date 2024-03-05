@@ -2,10 +2,7 @@ package com.natamus.aprilfools;
 
 import com.natamus.aprilfools.data.Sounds;
 import com.natamus.aprilfools.neoforge.config.IntegrateNeoForgeConfig;
-import com.natamus.aprilfools.neoforge.events.NeoForgeCommandRegisterEvent;
-import com.natamus.aprilfools.neoforge.events.NeoForgeFoolsBlockEvents;
-import com.natamus.aprilfools.neoforge.events.NeoForgeFoolsEntityEvents;
-import com.natamus.aprilfools.neoforge.events.NeoForgeFoolsSoundEvents;
+import com.natamus.aprilfools.neoforge.events.*;
 import com.natamus.aprilfools.util.Reference;
 import com.natamus.collective.check.RegisterMod;
 import net.minecraft.core.registries.Registries;
@@ -43,10 +40,12 @@ public class ModNeoForge {
 	private void loadComplete(final FMLLoadCompleteEvent event) {
 		NeoForge.EVENT_BUS.register(NeoForgeCommandRegisterEvent.class);
 
+		NeoForge.EVENT_BUS.register(NeoForgeFoolsServerTickEvents.class);
 		NeoForge.EVENT_BUS.register(NeoForgeFoolsBlockEvents.class);
 		NeoForge.EVENT_BUS.register(NeoForgeFoolsEntityEvents.class);
 
 		if (FMLEnvironment.dist.equals(Dist.CLIENT)) {
+			NeoForge.EVENT_BUS.register(NeoForgeFoolsClientTickEvents.class);
 			NeoForge.EVENT_BUS.register(NeoForgeFoolsSoundEvents.class);
 		}
 	}

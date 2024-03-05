@@ -4,12 +4,16 @@
   "package": "com.natamus.aprilfools.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+	"ArrowMixin",
+	"BedBlockMixin",
 	"CowMixin",
 	"CreeperMixin",
 	"WanderingTraderSpawnerMixin",
 	"WanderingTraderSpawnerMixin$WanderingTraderSpawnerInvoker"
   ],
   "client": [
+	"CameraMixin",
+	"LivingEntityRendererMixin"
   ],
   "server": [
   ],
