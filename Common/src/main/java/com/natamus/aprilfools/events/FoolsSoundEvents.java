@@ -13,11 +13,9 @@ public class FoolsSoundEvents {
 
 		String rawName = soundInstance.getLocation().toString();
 		if (rawName.contains("ambient") && (rawName.contains(".wolf") || rawName.contains(".cat"))) {
-			if (MakeCatsBarkDogsMeow.init(soundEngine, soundInstance, rawName)) {
-				return false;
-			}
+			return !MakeCatsBarkDogsMeow.init(soundEngine, soundInstance, rawName);
 		}
-		
+
 		return true;
 	}
 }
