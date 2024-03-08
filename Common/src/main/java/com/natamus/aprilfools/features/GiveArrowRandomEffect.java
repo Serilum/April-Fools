@@ -20,7 +20,7 @@ public class GiveArrowRandomEffect {
 			return;
 		}
 
-		double arrowHasRandomEffectChance = ConfigHandler.chanceNormalArrowFiredHasRandomEffect;
+		double arrowHasRandomEffectChance = Util.setExtraAprilFoolsChance(ConfigHandler.chanceNormalArrowFiredHasRandomEffect);
 		if (arrowHasRandomEffectChance <= 0) {
 			return;
 		}

@@ -25,6 +25,19 @@ public class Util {
 		return today.getMonthValue() == 4 && today.getDayOfMonth() == 1;
 	}
 
+	public static double setExtraAprilFoolsChance(double chance) {
+		if (!Variables.itIsAprilFoolsDay) {
+			return chance;
+		}
+
+		double multiplier = ConfigHandler.april1stChanceMultiplier;
+		if (multiplier <= 0.0) {
+			return chance;
+		}
+
+		return chance * multiplier;
+	}
+
 	public static MobEffect getRandomMobEffect(Level level) {
 		Registry<MobEffect> mobEffectRegistry = level.registryAccess().registryOrThrow(Registries.MOB_EFFECT);
 

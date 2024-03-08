@@ -2,6 +2,7 @@ package com.natamus.aprilfools.features;
 
 import com.natamus.aprilfools.config.ConfigHandler;
 import com.natamus.aprilfools.data.Variables;
+import com.natamus.aprilfools.util.Util;
 import com.natamus.collective.data.GlobalVariables;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.animal.Cow;
@@ -12,7 +13,7 @@ import net.minecraft.world.item.ItemUtils;
 
 public class CowGivesDifferentBuckets {
 	public static boolean init(Cow cow, Player player, InteractionHand hand) {
-		double differentBucketChance = ConfigHandler.chanceCowGivesDifferentBucket;
+		double differentBucketChance = Util.setExtraAprilFoolsChance(ConfigHandler.chanceCowGivesDifferentBucket);
 		if (differentBucketChance <= 0) {
 			return false;
 		}

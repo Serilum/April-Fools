@@ -1,6 +1,7 @@
 package com.natamus.aprilfools.features;
 
 import com.natamus.aprilfools.config.ConfigHandler;
+import com.natamus.aprilfools.util.Util;
 import com.natamus.collective.data.GlobalVariables;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.monster.Skeleton;
@@ -10,7 +11,7 @@ import net.minecraft.world.level.Level;
 
 public class GiveSkeletonSwordAndShield {
 	public static void init(Level level, Skeleton skeleton) {
-		double spawnWithSwordAndShieldChance = ConfigHandler.chanceSkeletonHasSwordAndShield;
+		double spawnWithSwordAndShieldChance = Util.setExtraAprilFoolsChance(ConfigHandler.chanceSkeletonHasSwordAndShield);
 		if (spawnWithSwordAndShieldChance <= 0) {
 			return;
 		}
