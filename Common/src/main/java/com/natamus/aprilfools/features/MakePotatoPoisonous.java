@@ -2,6 +2,8 @@ package com.natamus.aprilfools.features;
 
 import com.natamus.aprilfools.config.ConfigHandler;
 import com.natamus.aprilfools.data.Variables;
+import com.natamus.aprilfools.util.Util;
+import com.natamus.collective.data.GlobalVariables;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -12,7 +14,12 @@ import net.minecraft.world.phys.AABB;
 
 public class MakePotatoPoisonous {
 	public static void init(Level level, ItemEntity itemEntity, ItemStack itemStack) {
-		if (!ConfigHandler.makeAllPotatoCropDropsPoisonous) {
+		double potatoIsPoisonousChance = Util.setExtraAprilFoolsChance(ConfigHandler.chancePotatoCropDropsPoisonous);
+		if (potatoIsPoisonousChance <= 0) {
+			return;
+		}
+
+		if (GlobalVariables.random.nextDouble() > potatoIsPoisonousChance) {
 			return;
 		}
 

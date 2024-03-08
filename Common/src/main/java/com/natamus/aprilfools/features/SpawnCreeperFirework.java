@@ -1,6 +1,7 @@
 package com.natamus.aprilfools.features;
 
 import com.natamus.aprilfools.config.ConfigHandler;
+import com.natamus.aprilfools.util.Util;
 import com.natamus.collective.data.GlobalVariables;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -13,7 +14,7 @@ import net.minecraft.world.phys.Vec3;
 
 public class SpawnCreeperFirework {
 	public static boolean init(Creeper creeper) {
-		double explodeIntoFireworkChance = ConfigHandler.chanceCreepersExplodeIntoFireworks;
+		double explodeIntoFireworkChance = Util.setExtraAprilFoolsChance(ConfigHandler.chanceCreepersExplodeIntoFireworks);
 		if (explodeIntoFireworkChance <= 0) {
 			return false;
 		}
