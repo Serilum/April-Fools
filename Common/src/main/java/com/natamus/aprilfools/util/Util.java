@@ -4,7 +4,6 @@ import com.natamus.aprilfools.config.ConfigHandler;
 import com.natamus.aprilfools.data.Variables;
 import com.natamus.collective.data.GlobalVariables;
 import net.minecraft.core.Registry;
-import net.minecraft.core.Registry;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.level.Level;
 
@@ -23,6 +22,19 @@ public class Util {
 	public static boolean isAprilFoolsDay() {
 		LocalDate today = LocalDate.now();
 		return today.getMonthValue() == 4 && today.getDayOfMonth() == 1;
+	}
+
+	public static double setExtraAprilFoolsChance(double chance) {
+		if (!Variables.itIsAprilFoolsDay) {
+			return chance;
+		}
+
+		double multiplier = ConfigHandler.april1stChanceMultiplier;
+		if (multiplier <= 0.0) {
+			return chance;
+		}
+
+		return chance * multiplier;
 	}
 
 	public static MobEffect getRandomMobEffect(Level level) {
