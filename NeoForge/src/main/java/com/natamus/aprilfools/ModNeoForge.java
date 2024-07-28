@@ -5,6 +5,7 @@ import com.natamus.aprilfools.neoforge.config.IntegrateNeoForgeConfig;
 import com.natamus.aprilfools.neoforge.events.*;
 import com.natamus.aprilfools.util.Reference;
 import com.natamus.collective.check.RegisterMod;
+import com.natamus.collective.check.ShouldLoadCheck;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvent;
 import net.neoforged.api.distmarker.Dist;
@@ -25,6 +26,10 @@ public class ModNeoForge {
 	public static final DeferredHolder<SoundEvent, SoundEvent> FOOLS_WOLF_AMBIENT_OBJECT = SOUND_EVENTS.register(Sounds.FOOLS_WOLF_AMBIENT_LOCATION.getPath(), () -> Sounds.FOOLS_WOLF_SOUND_EVENT);
 	
 	public ModNeoForge(IEventBus modEventBus) {
+		if (!ShouldLoadCheck.shouldLoad(Reference.MOD_ID)) {
+			return;
+		}
+
 		modEventBus.addListener(this::loadComplete);
 
 		SOUND_EVENTS.register(modEventBus);
