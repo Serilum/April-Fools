@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.natamus.aprilfools.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+	"ArrowMixin",
+	"BedBlockMixin",
+	"CowMixin",
+	"CreeperMixin",
+	"WanderingTraderSpawnerMixin",
+	"WanderingTraderSpawnerMixin$WanderingTraderSpawnerInvoker"
+  ],
+  "client": [
+	"CameraMixin",
+	"LivingEntityRendererMixin"
+  ],
+  "server": [
+  ],
+  "injectors": {
+	"defaultRequire": 1
+  }
+}
