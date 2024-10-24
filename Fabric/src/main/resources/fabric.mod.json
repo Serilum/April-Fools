@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "aprilfools",
+  "version": "1.5",
+
+  "name": "April Fools",
+  "description": "Enables various silly and funny configurable features on April Fools day!",
+  "authors": [ "Rick South" ],
+  "contact": {
+    "homepage": "https://serilum.com/mod/april-fools",
+    "sources": "https://github.com/Serilum/April-Fools",
+    "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20April%20Fools"
+  },
+
+  "license": "All Right Reserved",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": { "main": [ "com.natamus.aprilfools.ModFabric" ], "client": [ "com.natamus.aprilfools.ModFabricClient" ], "modmenu": [ "com.natamus.aprilfools.fabric.config.IntegrateModMenu" ] },
+  "mixins": [
+    "aprilfools.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric": "*",
+    "minecraft": ">=1.21",
+    "java": ">=21",
+    "collective": ">=7.88"
+  },
+
+  "custom": {
+    "modmenu": {
+      "links": {
+        "Donate <3" : "https://ricksouth.com/donate"
+      }
+    }
+  },
+
+  "contributors": [
+	  " ",
+	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
+	  " ",
+	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  " ",
+	  "Membership sponsors:",
+	  " Alister",
+	  " Andrean Olgo",
+	  " aternosorg",
+	  " Cherriesaurus",
+	  " kate1073",
+	  " Michael W. S.",
+	  " Tyler Behl",
+	  " XAgent"
+  ]
+}
