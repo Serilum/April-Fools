@@ -47,15 +47,15 @@ public class ModForge {
 	}
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
-		MinecraftForge.EVENT_BUS.register(new ForgeCommandRegisterEvent());
+		MinecraftForge.EVENT_BUS.register(ForgeCommandRegisterEvent.class);
 
-		MinecraftForge.EVENT_BUS.register(new ForgeFoolsServerTickEvents());
-		MinecraftForge.EVENT_BUS.register(new ForgeFoolsBlockEvents());
-		MinecraftForge.EVENT_BUS.register(new ForgeFoolsEntityEvents());
+		MinecraftForge.EVENT_BUS.register(ForgeFoolsServerTickEvents.class);
+		MinecraftForge.EVENT_BUS.register(ForgeFoolsBlockEvents.class);
+		MinecraftForge.EVENT_BUS.register(ForgeFoolsEntityEvents.class);
 
 		if (FMLEnvironment.dist.equals(Dist.CLIENT)) {
-			MinecraftForge.EVENT_BUS.register(new ForgeFoolsClientTickEvents());
-			MinecraftForge.EVENT_BUS.register(new ForgeFoolsSoundEvents());
+			MinecraftForge.EVENT_BUS.register(ForgeFoolsClientTickEvents.class);
+			MinecraftForge.EVENT_BUS.register(ForgeFoolsSoundEvents.class);
 		}
 	}
 
