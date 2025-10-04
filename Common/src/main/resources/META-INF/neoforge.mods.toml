@@ -6,7 +6,7 @@ logoFile="icon.png"
 
 [[mods]]
 modId="aprilfools"
-version="1.7"
+version="1.8"
 displayName="April Fools"
 displayURL="https://serilum.com/mod/april-fools"
 authors="Rick South"
