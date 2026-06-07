@@ -28,10 +28,10 @@ public class CommandAprilFools {
 
 				WanderingTraderSpawner wanderingTraderSpawner = new WanderingTraderSpawner((ServerLevelData)level.getLevelData());
 				if (((WanderingTraderSpawnerInvoker)wanderingTraderSpawner).invokeSpawn((ServerLevel)level)) {
-					MessageFunctions.sendMessage(player, "Wandering trader spawn succesful!", ChatFormatting.DARK_GREEN);
+					MessageFunctions.sendTranslatableMessage(player, "collective.shared.message.wanderingtraderspawnsuccesful", ChatFormatting.DARK_GREEN);
 				}
 				else {
-					MessageFunctions.sendMessage(player, "Wandering trader spawn failed, try again.", ChatFormatting.RED);
+					MessageFunctions.sendTranslatableMessage(player, "collective.shared.message.wanderingtraderspawnfailed", ChatFormatting.RED);
 				}
 
 				return 1;
