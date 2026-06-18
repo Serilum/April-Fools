@@ -2,7 +2,6 @@ package com.natamus.aprilfools.neoforge.events;
 
 import com.natamus.aprilfools.events.FoolsClientTickEvents;
 import net.minecraft.client.Minecraft;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 

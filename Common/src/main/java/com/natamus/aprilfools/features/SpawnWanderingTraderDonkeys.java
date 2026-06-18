@@ -3,7 +3,7 @@ package com.natamus.aprilfools.features;
 import com.natamus.aprilfools.config.ConfigHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.animal.equine.Donkey;
 import net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader;
@@ -14,7 +14,7 @@ public class SpawnWanderingTraderDonkeys {
 			return false;
 		}
 
-		Donkey donkey = EntityType.DONKEY.spawn(serverLevel, blockPos, EntitySpawnReason.EVENT);
+		Donkey donkey = EntityTypes.DONKEY.spawn(serverLevel, blockPos, EntitySpawnReason.EVENT);
 		if (donkey != null) {
 			donkey.setLeashedTo(wanderingTrader, true);
 			return true;

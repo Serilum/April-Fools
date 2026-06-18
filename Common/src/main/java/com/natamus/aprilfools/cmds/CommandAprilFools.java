@@ -11,7 +11,6 @@ import net.minecraft.server.permissions.Permissions;
 import net.minecraft.world.entity.npc.wanderingtrader.WanderingTraderSpawner;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.storage.ServerLevelData;
 
 public class CommandAprilFools {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {

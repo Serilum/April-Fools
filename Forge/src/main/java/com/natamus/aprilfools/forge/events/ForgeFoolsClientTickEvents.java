@@ -2,7 +2,6 @@ package com.natamus.aprilfools.forge.events;
 
 import com.natamus.aprilfools.events.FoolsClientTickEvents;
 import net.minecraft.client.Minecraft;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.TickEvent.ClientTickEvent;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;

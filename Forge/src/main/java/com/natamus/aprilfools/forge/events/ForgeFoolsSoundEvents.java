@@ -1,7 +1,6 @@
 package com.natamus.aprilfools.forge.events;
 
 import com.natamus.aprilfools.events.FoolsSoundEvents;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.sound.PlaySoundEvent;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;

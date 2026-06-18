@@ -3,8 +3,6 @@ package com.natamus.aprilfools.mixin;
 import com.natamus.aprilfools.config.ConfigHandler;
 import com.natamus.aprilfools.util.Util;
 import net.minecraft.client.Camera;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
