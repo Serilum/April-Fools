@@ -11,14 +11,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(value = Camera.class, priority = 1001)
 public abstract class CameraMixin {
-    @Shadow protected abstract void move(float $$0, float $$1, float $$2);
+	@Shadow protected abstract void move(float $$0, float $$1, float $$2);
 
-    @Inject(method = "alignWithEntity(F)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Camera;move(FFF)V", ordinal = 1))
-    private void alignWithEntity(float partialTicks, CallbackInfo ci) {
-        if (!Util.areAprilFoolsFeaturesEnabled() || !ConfigHandler.makePlayersSleepWithFeetOnPillow) {
-            return;
-        }
+	@Inject(method = "alignWithEntity(F)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Camera;move(FFF)V", ordinal = 1))
+	private void alignWithEntity(float partialTicks, CallbackInfo ci) {
+		if (!Util.areAprilFoolsFeaturesEnabled() || !ConfigHandler.makePlayersSleepWithFeetOnPillow) {
+			return;
+		}
 
-        this.move(-1.0F, 0.0F, 0.0F);
-    }
+		this.move(-1.0F, 0.0F, 0.0F);
+	}
 }

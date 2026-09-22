@@ -13,7 +13,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 public class CommandAprilFools {
-    public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
+	public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
 		dispatcher.register(Commands.literal("aprilfools").requires((iCommandSender) -> { return iCommandSender.permissions().hasPermission(Permissions.COMMANDS_ADMIN) && iCommandSender.isPlayer(); })
 			.then(Commands.literal("wandering-trader")
 			.executes((command) -> {
@@ -36,5 +36,5 @@ public class CommandAprilFools {
 				return 1;
 			}))
 		);
-    }
+	}
 }

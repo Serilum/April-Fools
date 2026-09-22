@@ -14,8 +14,8 @@ public class ForgeCommandRegisterEvent {
 		RegisterCommandsEvent.BUS.addListener(ForgeCommandRegisterEvent::registerCommands);
 	}
 
-    @SubscribeEvent
-    public static void registerCommands(RegisterCommandsEvent e) {
-    	CommandAprilFools.register(e.getDispatcher());
-    }
+	@SubscribeEvent
+	public static void registerCommands(RegisterCommandsEvent e) {
+		CommandAprilFools.register(e.getDispatcher());
+	}
 }

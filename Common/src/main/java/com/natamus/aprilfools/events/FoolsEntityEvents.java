@@ -25,7 +25,7 @@ public class FoolsEntityEvents {
 			//GiveArrowRandomEffect.init(level, (Arrow)entity);
 		}
 		else if (entity instanceof ItemEntity itemEntity) {
-            ItemStack itemStack = itemEntity.getItem();
+			ItemStack itemStack = itemEntity.getItem();
 			if (itemStack.getItem().equals(Items.POTATO)) {
 				MakePotatoPoisonous.init(level, itemEntity, itemStack);
 			}

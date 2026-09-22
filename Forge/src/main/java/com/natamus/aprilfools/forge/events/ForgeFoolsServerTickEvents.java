@@ -14,8 +14,8 @@ public class ForgeFoolsServerTickEvents {
 		TickEvent.ServerTickEvent.Post.BUS.addListener(ForgeFoolsServerTickEvents::onServerTick);
 	}
 
-    @SubscribeEvent
-    public static void onServerTick(TickEvent.ServerTickEvent.Post e) {
-        FoolsServerTickEvents.onServerTick(e.server());
-    }
+	@SubscribeEvent
+	public static void onServerTick(TickEvent.ServerTickEvent.Post e) {
+		FoolsServerTickEvents.onServerTick(e.server());
+	}
 }
