@@ -1,0 +1,25 @@
+package com.serilum.aprilfools.features;
+
+import com.serilum.aprilfools.config.ConfigHandler;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EntityTypes;
+import net.minecraft.world.entity.EntitySpawnReason;
+import net.minecraft.world.entity.animal.equine.Donkey;
+import net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader;
+
+public class SpawnWanderingTraderDonkeys {
+	public static boolean init(ServerLevel serverLevel, BlockPos blockPos, WanderingTrader wanderingTrader) {
+		if (!ConfigHandler.makeWanderingTraderSpawnWithDonkeys) {
+			return false;
+		}
+
+		Donkey donkey = EntityTypes.DONKEY.spawn(serverLevel, blockPos, EntitySpawnReason.EVENT);
+		if (donkey != null) {
+			donkey.setLeashedTo(wanderingTrader, true);
+			return true;
+		}
+
+		return false;
+	}
+}
