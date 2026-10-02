@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "id": "aprilfools",
-  "version": "2.0",
+  "version": "2.1",
 
   "name": "April Fools",
   "description": "Enables various silly and funny configurable features on April Fools day!",
-  "authors": [ "Rick South" ],
+  "authors": [ "Serilum" ],
   "contact": {
     "homepage": "https://serilum.com/mod/april-fools",
     "sources": "https://github.com/Serilum/April-Fools",
     "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20April%20Fools"
   },
 
-  "license": "All Right Reserved",
+  "license": "All Rights Reserved",
   "icon": "icon.png",
 
   "environment": "*",
-  "entrypoints": { "main": [ "com.natamus.aprilfools.ModFabric" ], "client": [ "com.natamus.aprilfools.ModFabricClient" ], "modmenu": [ "com.natamus.aprilfools.fabric.config.IntegrateModMenu" ] },
+  "entrypoints": { "main": [ "com.serilum.aprilfools.ModFabric" ], "client": [ "com.serilum.aprilfools.ModFabricClient" ], "modmenu": [ "com.serilum.aprilfools.fabric.config.IntegrateModMenu" ] },
   "mixins": [
     "aprilfools.mixins.json"
   ],
@@ -26,7 +26,7 @@
     "fabric-api": "*",
     "minecraft": ">=26.2",
     "java": ">=25",
-    "collective": ">=8.29"
+    "collective": ">=8.40"
   },
 
   "custom": {
@@ -41,15 +41,14 @@
 	  " ",
 	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
 	  " ",
-	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  "If you would like to contribute too, check out https://serilum.com/donate",
 	  " ",
 	  "Membership sponsors:",
 	  " Andrean Olgo",
+	  " AnyankaT",
 	  " aternosorg",
 	  " Cherriesaurus",
-	  " Josh",
 	  " Linda Jansen",
-	  " Michelle Smith",
 	  " MWS",
 	  " Tyler Behl"
   ]
